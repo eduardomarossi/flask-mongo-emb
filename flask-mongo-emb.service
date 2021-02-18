@@ -1,0 +1,11 @@
+[Unit]
+Description=Unit for starting a basic flask app 
+
+[Service]
+User=root
+Restart=always
+WorkingDirectory=/var/www/flask-mongo-emb
+ExecStart=/var/www/flask-mongo-emb/venv/bin/flask run --host=0.0.0.0
+
+[Install]
+WantedBy=multi-user.target
